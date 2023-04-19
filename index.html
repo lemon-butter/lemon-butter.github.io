@@ -1,0 +1,194 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(function() {
+            setInterval(function() {
+                var current = $('#slideshow img:first-child');
+                var next = current.next('img');
+
+                current.animate({opacity: 0}, 1000);
+                next.animate({opacity: 1}, 1000, function() {
+                    current.css({opacity: 0, 'z-index': 1}).appendTo('#slideshow');
+                    next.css({'z-index': 2});
+                });
+            }, 2000);
+        });
+    </script>
+    <style>
+        #container{
+            margin:0 auto;
+            max-width:1200px;
+            width:100%;
+        }
+
+        #container section{padding:0;}
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header id="header_wrap">
+            <div class="logo_wrap">
+                <a href="./">
+                    <img src="./image/logo.png">
+                    <div style="display: inline-block">
+                        캠드라이<br>
+                        카페트 클리닝
+                    </div>
+                </a>
+            </div>
+            <div class="menu_wrap">
+                <ul class="menu_ul">
+                    <li><a href="./page_01.html">인사말</a></li>
+                    <li><a href="./page_02.html">캠드라이 장점</a></li>
+                    <li><a href="./page_03.html">카페트 관리</a></li>
+                    <li><a href="./page_04.html">의뢰하기</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <style>
+            .banner_wrap{}
+            .banner_wrap .title_img{position:absolute; z-index: 3; width: 100%; margin-top: 3vw; text-align: center}
+            .banner_wrap .title_img img{width:80vw; max-width: 960px;}
+
+            .banner_wrap #slideshow {position: relative; width:100%; height: 0; padding-top: 33%; overflow: hidden;}
+            .banner_wrap #slideshow img {width: 130%; height: auto; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;}
+            .banner_wrap #slideshow img:first-child {opacity: 1; z-index: 2;}
+
+            @media (min-width: 1200px) {
+                .banner_wrap .title_img{margin-top: 40px; text-align: center}
+                .banner_wrap .title_img img{width:75%; }
+
+                .banner_wrap #slideshow {position: relative; width:100%; height: 0; padding-top: 33%; overflow: hidden;}
+                .banner_wrap #slideshow img {width: 100%; height: auto; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1;}
+                .banner_wrap #slideshow img:first-child {opacity: 1; z-index: 2;}
+            }
+
+            @media (max-width: 540px) {
+                .banner_wrap .title_img{margin-top:8.5vw;}
+                .banner_wrap #slideshow {padding-top: 43%;}
+            }
+        </style>
+        <section>
+            <div class="banner_wrap" style="position: relative;">
+                <div class="title_img">
+                    <img src="./image/banner_title.png">
+                </div>
+                <div id="slideshow">
+                    <img src="./image/banner_01.jpg" alt="">
+                    <img src="./image/banner_02.jpg" alt="">
+                </div>
+            </div>
+            <style>
+                .section_menu{width:85%; margin:40px auto; padding-bottom:50vw; overflow: hidden}
+                .section_menu li{width:20%; margin:0 2.5%;}
+                .section_menu li div.menu_icon{text-align:center; border-radius:9999px; border:3px solid #051a36; width:14vw; height:14vw; margin:0 auto;}
+                .section_menu li div.menu_icon i{font-size:5vw; color:#051a36; line-height: 14vw;}
+                .section_menu li div.menu_text{text-align: center; margin-top:20px; font-size:3vw; color:#051a36}
+                .section_menu li:hover div.menu_icon{background: #051a36;}
+                .section_menu li:hover div.menu_icon i{color:#ffffff;}
+                .section_menu li:hover div.menu_text{font-weight: 700;}
+
+                @media (min-width: 1200px) {
+                    .section_menu li div.menu_icon{width:175px; height:175px;}
+                    .section_menu li div.menu_icon i{font-size:47px; line-height: 175px;}
+                    .section_menu li div.menu_text{font-size:34px;}
+                }
+
+                @media (max-width: 540px) {
+                    .section_menu li div.menu_icon{border-width: 2px;}
+                    .section_menu li div.menu_text{font-size:14px; margin-top:10px;}
+                    .section_menu li:nth-child(2) div.menu_text{letter-spacing: -2px;}
+                }
+            </style>
+            <ul class="section_menu">
+                <li>
+                    <a href="./page_01.html">
+                        <div class="menu_icon">
+                            <i class="xi-message xi-x"></i>
+                        </div>
+                        <div class="menu_text">
+                            인사말
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./page_02.html">
+                        <div class="menu_icon">
+                            <i class="xi-thumbs-up xi-x"></i>
+                        </div>
+                        <div class="menu_text">
+                            캠드라이 장점
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./page_03.html">
+                        <div class="menu_icon">
+                            <i class="xi-paper xi-x"></i>
+                        </div>
+                        <div class="menu_text">
+                            카페트 관리
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="./page_04.html">
+                        <div class="menu_icon">
+                            <i class="xi-call xi-x"></i>
+                        </div>
+                        <div class="menu_text">
+                            의뢰하기
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <style>
+            footer{position: fixed; bottom:0; width:100%; z-index: 3; left:0;}
+            footer table{background: #1a4782; width:100%; height: 40vw; max-height:240px; margin: 0 auto; max-width: 1200px;}
+            footer table td{width:50%; font-size:3.6vw; line-height:6.4vw; color:white;}
+            footer table td strong{font-size:4.2vw; line-height: 4vw}
+            footer table td a{color:white; text-decoration: underline}
+            footer table td:nth-child(1){padding-right:3vw; text-align: right}
+            footer table td:nth-child(2){padding-left:6vw;}
+
+            @media (min-width: 1200px) {
+                footer table{height: 300px;}
+                footer table td{font-size:32px; line-height:60px;}
+                footer table td strong{font-size:42px; line-height: 40px;}
+                footer table td:nth-child(1){padding-right:30px;}
+                footer table td:nth-child(2){padding-left:30px;}
+            }
+        </style>
+        <footer>
+            <table>
+                <tr>
+                    <td>
+                        <strong>카페트 크리닝 전문업체</strong><br>
+                        친환경 카페트 관리시스템
+                    </td>
+                    <td style=";">
+                        대전&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:042-467-8085">042-467-8085</a><br>
+                        천안&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:041-557-9282">041-557-9282</a><br>
+                        청주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:043-293-6161">043-293-6161</a><br>
+                        세종&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:010-4763-6489">010-4763-6489</a><br>
+                        &nbsp;&nbsp;&nbsp;☎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:010-4763-6489">010-4763-6489</a>
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+</body>
+</html>
