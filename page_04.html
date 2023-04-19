@@ -1,0 +1,138 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="header_wrap">
+            <div class="logo_wrap">
+                <a href="./">
+                    <img src="./image/logo.png">
+                    <div style="display: inline-block">
+                        캠드라이<br>
+                        카페트 클리닝
+                    </div>
+                </a>
+            </div>
+            <div class="menu_wrap">
+                <ul class="menu_ul">
+                    <li><a href="./page_01.html">인사말</a></li>
+                    <li><a href="./page_02.html">캠드라이 장점</a></li>
+                    <li><a href="./page_03.html">카페트 관리</a></li>
+                    <li><a href="./page_04.html">의뢰하기</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <style>
+            .inner_text{width:100%; padding:2% 10% 5%; box-sizing: border-box;}
+            .inner_text h3{font-size:18px; padding:30px 0 20px;}
+
+            /*.flow_ul{width:100%;}*/
+            /*.flow_ul li{width: 100px; text-align: center; }*/
+
+            ul.flow_ul {
+                width:100%; margin:0 auto;
+            }
+
+            ul.flow_ul li {
+                display: flex;
+                align-items: center; /* 수직 중앙 정렬 */
+                justify-content: center; /* 수평 중앙 정렬 */
+
+                /*display: flex;*/
+                /*align-items: center;*/
+                width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                background-color: #1a4782;
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                color:white;
+                font-weight: 700;
+                font-size:18px;
+                margin-right:40px;
+                margin-bottom:20px;
+                position: relative;
+            }
+            ul.flow_ul li::after{
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                border-top: 13px solid transparent;
+                border-left: 20px solid #1a4782;
+                border-right: 0px solid transparent;
+                border-bottom: 13px solid transparent;
+                top: 38px;
+                left: 111px;
+            }
+            ul.flow_ul li:last-of-type::after{
+                display: none;
+            }
+            ul.flow_ul li span{
+                justify-items: center;
+            }
+
+
+            @media (max-width: 540px) {
+                ul.flow_ul {width:100%;}
+
+                ul.flow_ul li {
+                    width: 60px;
+                    height: 60px;
+                    font-size:14px;
+                }
+                ul.flow_ul li::after{
+                    top: 20px;
+                    left: 71px;
+                }
+            }
+        </style>
+        <section>
+            <h1>의뢰하기</h1>
+            <div class="inner_text">
+                <h3>카페트 크리닝 수거 배송 절차</h3>
+
+                ① 접수<br>
+                - 접수전화 042-476-8085로 전화하시면 주소, 성명, 전화번호, 휴대폰 번호로 접수 받습니다.<br><br>
+                ② 포장<br>
+                - 특이사항(곰팡이, 오점, 페인트 등)이 있으시면 기록하여 카페트 내부에 넣어서, 쓰시는 면을 안 쪽으로 말아줍니다.<br>
+                - 말아진 카페트를 끈으로 묶어주고, 양쪽 끝부분은 신문지로 감아주면 운송 중에 파손, 오염을 예방 할 수 있습니다.<br><br>
+                ③ 수거<br>
+                - 당사에서 직접 수거 / 배송하며, 기타 지방은 택배회사를 이용합니다.<br><br>
+                ④ 카페트 입고<br>
+                - 카페트 뒷면에 고유번호와 이름기재(분실, 바뀜방지)<br><br>
+                ⑤ 배송<br>
+                - 매회 새케이스 부직포 포장하여 당사에서 직접 배송 합니다.
+            </div>
+            <div style="background:#f2f2f2; overflow: hidden; padding:40px 10%; box-sizing: border-box; ">
+                <h3 style="margin-bottom: 20px; font-size:18px">가정용 크리닝 공정</h3>
+                <ul class="flow_ul">
+                    <li>진공청소</li>
+                    <li>얼룩제거</li>
+                    <li>분사</li>
+                    <li>버퍼</li>
+                    <li>흡수</li>
+                    <li>패트</li>
+                    <li>털고르기</li>
+                    <li>건조라인</li>
+                    <li>앞 뒤<br>진공청소</li>
+                    <li>테이프</li>
+                    <li>포장</li>
+                    <li>배송대기</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
